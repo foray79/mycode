@@ -1,0 +1,102 @@
+{
+    "title": "ErrorException",
+    "type": "ErrorException",
+    "code": 500,
+    "message": "Undefined variable: data",
+    "file": "/var/www/app/Controllers/Elastic.php",
+    "line": 108,
+    "trace": [
+        {
+            "file": "/var/www/app/Controllers/Elastic.php",
+            "line": 108,
+            "function": "errorHandler",
+            "class": "CodeIgniter\\Debug\\Exceptions",
+            "type": "->",
+            "args": [
+                8,
+                "Undefined variable: data",
+                "/var/www/app/Controllers/Elastic.php",
+                108,
+                {
+                    "mode": "product1",
+                    "exec": "view",
+                    "query_json": null
+                }
+            ]
+        },
+        {
+            "file": "/var/www/vendor/codeigniter4/framework/system/CodeIgniter.php",
+            "line": 910,
+            "function": "data",
+            "class": "App\\Controllers\\Elastic",
+            "type": "->",
+            "args": [
+                "product1",
+                "view"
+            ]
+        },
+        {
+            "file": "/var/www/vendor/codeigniter4/framework/system/CodeIgniter.php",
+            "line": 398,
+            "function": "runController",
+            "class": "CodeIgniter\\CodeIgniter",
+            "type": "->",
+            "args": [
+                {
+                    "host": "elastic7",
+                    "port": 9200,
+                    "mode": "GET",
+                    "index": "product1",
+                    "app": null
+                }
+            ]
+        },
+        {
+            "file": "/var/www/vendor/codeigniter4/framework/system/CodeIgniter.php",
+            "line": 306,
+            "function": "handleRequest",
+            "class": "CodeIgniter\\CodeIgniter",
+            "type": "->",
+            "args": [
+                null,
+                {
+                    "handler": "file",
+                    "backupHandler": "dummy",
+                    "storePath": "/var/www/writable/cache/",
+                    "cacheQueryString": false,
+                    "prefix": "",
+                    "memcached": {
+                        "host": "127.0.0.1",
+                        "port": 11211,
+                        "weight": 1,
+                        "raw": false
+                    },
+                    "redis": {
+                        "host": "127.0.0.1",
+                        "password": null,
+                        "port": 6379,
+                        "timeout": 0,
+                        "database": 0
+                    },
+                    "validHandlers": {
+                        "dummy": "CodeIgniter\\Cache\\Handlers\\DummyHandler",
+                        "file": "CodeIgniter\\Cache\\Handlers\\FileHandler",
+                        "memcached": "CodeIgniter\\Cache\\Handlers\\MemcachedHandler",
+                        "predis": "CodeIgniter\\Cache\\Handlers\\PredisHandler",
+                        "redis": "CodeIgniter\\Cache\\Handlers\\RedisHandler",
+                        "wincache": "CodeIgniter\\Cache\\Handlers\\WincacheHandler"
+                    }
+                },
+                false
+            ]
+        },
+        {
+            "file": "/var/www/public/index.php",
+            "line": 45,
+            "function": "run",
+            "class": "CodeIgniter\\CodeIgniter",
+            "type": "->",
+            "args": []
+        }
+    ]
+}

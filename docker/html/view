@@ -1,0 +1,151 @@
+{
+    "index": {
+        "_id": "10000027"
+    }
+}{
+    "po_title": "\ub0c9\uc628\ucc1c\uc9c8\ud329 3\uc885\uc138\ud2b8",
+    "item_completion": "\ub0c9\uc628\ucc1c\uc9c8\ud329 3\uc885\uc138\ud2b8",
+    "inven": "94",
+    "price": "27000",
+    "status": "1"
+}{
+    "index": {
+        "_id": "10000029"
+    }
+}{
+    "po_title": "\ud30c\uc2dc \ud578\ub4dc\ud06c\ub9bc 5\uc885\uc138\ud2b8",
+    "item_completion": "\ud30c\uc2dc \ud578\ub4dc\ud06c\ub9bc 5\uc885\uc138\ud2b8",
+    "inven": "99999",
+    "price": "20000",
+    "status": "1"
+}{
+    "index": {
+        "_id": "10000030"
+    }
+}{
+    "po_title": "\ud5e4\ub098 \uc54c\ub85c\uc5d0 \uc0f4\ud478\ud615 \ucc9c\uc5f0 \uc5fc\uc0c9\uc81c",
+    "item_completion": "\ud5e4\ub098 \uc54c\ub85c\uc5d0 \uc0f4\ud478\ud615 \ucc9c\uc5f0 \uc5fc\uc0c9\uc81c",
+    "inven": "99987",
+    "price": "15000",
+    "status": "1"
+}{
+    "index": {
+        "_id": "10000031"
+    }
+}{
+    "po_title": "\uc36c\ub77c\uc774\uc988 \uc2e0\ubc1c\uc815\ub9ac\ub300",
+    "item_completion": "\uc36c\ub77c\uc774\uc988 \uc2e0\ubc1c\uc815\ub9ac\ub300",
+    "inven": "224",
+    "price": "39800",
+    "status": "1"
+}{
+    "index": {
+        "_id": "10000032"
+    }
+}{
+    "po_title": "\uc640\ud39c\uc810\ud37c",
+    "item_completion": "\uc640\ud39c\uc810\ud37c",
+    "inven": "0",
+    "price": "0",
+    "status": "1"
+}{
+    "index": {
+        "_id": "10000033"
+    }
+}{
+    "po_title": "\ube45\ub9c8\ub9c8\uc6d0\ud53c\uc2a4",
+    "item_completion": "\ube45\ub9c8\ub9c8\uc6d0\ud53c\uc2a4",
+    "inven": "0",
+    "price": "0",
+    "status": "1"
+}{
+    "index": {
+        "_id": "10000034"
+    }
+}{
+    "po_title": "\uc36c\ub77c\uc774\uc988 \uc2e0\ubc1c\uc815\ub9ac\ub300\u3147\u3147\u3147\u3147ccee",
+    "item_completion": "\uc36c\ub77c\uc774\uc988 \uc2e0\ubc1c\uc815\ub9ac\ub300\u3147\u3147\u3147\u3147ccee",
+    "inven": "99",
+    "price": "0",
+    "status": "1"
+}{
+    "index": {
+        "_id": "10000040"
+    }
+}{
+    "po_title": "\ud14c\uc2a4\ud2b8\uc6a9 -\ub7f0\uce58\ubcf4\ub0c9\ubc31 \uc138\ud2b8",
+    "item_completion": "\ud14c\uc2a4\ud2b8\uc6a9 -\ub7f0\uce58\ubcf4\ub0c9\ubc31 \uc138\ud2b8",
+    "inven": "100",
+    "price": "25600",
+    "status": "2"
+}{
+    "index": {
+        "_id": "10000035"
+    }
+}{
+    "po_title": "\uac9f\ub274\uc2a4\ud0a8 \uc544\uc0ac\uc774\ubca0\ub9ac \uc2a4\ud0a8\ucf00\uc5b4 5\uc88544",
+    "item_completion": "\uac9f\ub274\uc2a4\ud0a8 \uc544\uc0ac\uc774\ubca0\ub9ac \uc2a4\ud0a8\ucf00\uc5b4 5\uc88544",
+    "inven": "0",
+    "price": "0",
+    "status": "1"
+}{
+    "index": {
+        "_id": "10000036"
+    }
+}{
+    "po_title": "\u3147\u3147\u3147\uc88b\uc740\uc544\uce68 t\uc2ec\ucff5\ub3c4",
+    "item_completion": "\u3147\u3147\u3147\uc88b\uc740\uc544\uce68 t\uc2ec\ucff5\ub3c4",
+    "inven": "100",
+    "price": "0",
+    "status": "1"
+}{
+    "index": {
+        "_id": "10000037"
+    }
+}{
+    "po_title": "12345",
+    "item_completion": "12345",
+    "inven": "0",
+    "price": "0",
+    "status": "1"
+}{
+    "index": {
+        "_id": "10000038"
+    }
+}{
+    "po_title": "LED\uc870\uba85\uac70\uc6b8",
+    "item_completion": "LED\uc870\uba85\uac70\uc6b8",
+    "inven": "190",
+    "price": "25000",
+    "status": "1"
+}{
+    "index": {
+        "_id": "10000039"
+    }
+}{
+    "po_title": "\uc5c4\ub9c8\uc190 \ucc1c\uc9c8 \ub9c8\uc0ac\uc9c0\uae30",
+    "item_completion": "\uc5c4\ub9c8\uc190 \ucc1c\uc9c8 \ub9c8\uc0ac\uc9c0\uae30",
+    "inven": "0",
+    "price": "55000",
+    "status": "1"
+}{
+    "index": {
+        "_id": "10000041"
+    }
+}{
+    "po_title": "\ud14c\uc2a4\ud2b8\uc6a9-\uc218\ub3d9 \uc138\ud0c1\uae30! \ube68\ub798\ud310(\ud14c\uc2a4\ud2b8\uc6a9)",
+    "item_completion": "\ud14c\uc2a4\ud2b8\uc6a9-\uc218\ub3d9 \uc138\ud0c1\uae30! \ube68\ub798\ud310(\ud14c\uc2a4\ud2b8\uc6a9)",
+    "inven": "87",
+    "price": "35000",
+    "status": "2"
+}{
+    "index": {
+        "_id": "10000042"
+    }
+}{
+    "po_title": "\ub2e4\ub2e4\ub9c8 \ud2b9\uac15 \ud6c4\ub77c\uc774\ud32c",
+    "item_completion": "\ub2e4\ub2e4\ub9c8 \ud2b9\uac15 \ud6c4\ub77c\uc774\ud32c",
+    "inven": "0",
+    "price": "62000",
+    "status": "2"
+}

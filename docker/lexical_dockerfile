@@ -1,0 +1,40 @@
+FROM ubuntu:18.04
+LABEL maintainer pareko <pareko@jasongroup.co.kr>
+# 참고 https://github.com/koorukuroo/mecab-ko-web/blob/master/Dockerfile 참고
+# 품사 표 : https://docs.google.com/spreadsheets/d/1-9blXKjtjeKZqsf4NzHeYJCrr49-nXeRF6D80udfcwY/edit#gid=589544265
+# 호출 방법 : http://localhost:5000/?text=%EC%98%A4%EB%8A%98%EC%A0%90%EC%8B%AC%EC%9D%80%20%EB%A7%9B%EC%9D%B4%20%EC%97%86%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4.
+
+RUN cp /etc/apt/sources.list /etc/apt/sources.list.org
+RUN sed -e 's/\(us.\)\?archive.ubuntu.com/ftp.daumkakao.com/g' -e 's/security.ubuntu.com/ftp.daumkakao.com/g' < /etc/apt/sources.list.org > /etc/apt/sources.list
+
+RUN apt-get update
+RUN apt-get install -y wget build-essential autotools-dev automake libmecab2 libmecab-dev git net-tools vim openjdk-11-jdk
+RUN apt-get install -y python3.6-dev
+RUN apt-get install -y python3-pip
+RUN cd /usr/bin; rm python; ln -s python3.6 python
+
+# mecab  <-- konlpy 포함된 모듈 사용
+#RUN wget -O - https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.9.2.tar.gz | tar zxfv -
+#RUN cd mecab-0.996-ko-0.9.2; ./configure; make; make install; ldconfig
+
+# mecab-ko-dic
+#RUN wget -O - https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.1.1-20180720.tar.gz | tar zxfv -
+#RUN cd mecab-ko-dic-2.1.1-20180720; sh ./autogen.sh
+#RUN cd mecab-ko-dic-2.1.1-20180720; ./configure; make; make install; ldconfig
+
+# mecab-python
+#RUN git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
+#RUN cd mecab-python-0.996; python3 setup.py build; python3 setup.py install
+
+RUN pip3 install flask
+RUN pip3 install KoNLPy
+
+RUN apt-get remove -y build-essential
+#RUN rm -rf mecab-*
+
+RUN mkdir /home/python
+COPY ./flask/web.py /home/python/web.py
+
+EXPOSE 5000
+#CMD ifconfig | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'; cd /root; python web.py
+CMD cd /home/python; python web.py

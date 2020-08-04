@@ -1,0 +1,10 @@
+이미지/컨테이너 일괄 삭제
+
+docker system prune -a
+docker system prune -f 
+
+
+docker-compose down
+
+
+composer create-project laravel/laravel 프로젝트명 --prefer-dist "5.2.*"

@@ -1,0 +1,125 @@
+version: '3.2'
+services:
+
+  #PHP Service
+  app:
+    build:
+      context: .
+      dockerfile: php_dockerfile
+    image: digitalocean.com/php
+    container_name: app
+    restart: unless-stopped
+    depends_on:
+      - mysql
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    volumes:
+      - ../../git/search-web2:/var/www
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - app-network
+
+  #Nginx Service
+  webserver:
+    image: nginx:alpine
+    container_name: webserver
+    restart: unless-stopped
+    tty: true
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ../../git/search-web2:/var/www
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - app-network
+
+
+  #MySQL Service
+  mysql:
+    image: mysql:5.7.22
+    container_name: mysql
+    restart: unless-stopped
+    tty: true
+    expose:
+      - "3306"
+    #ports:
+    #  - "3306:3306"
+    environment:
+      MYSQL_DATABASE: laravel_db
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: laravel_pw
+      MYSQL_ROOT_PASSWORD: jasongroup
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - dbdata:/var/lib/mysql/
+      #- ./mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - app-network
+
+  adminer:
+    container_name: adminer
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    networks:
+      - app-network
+#elasticsearch
+  elastic7:
+    container_name: elastic7
+    build:
+      context: .
+      dockerfile: elastic7_dockerfile
+    environment:
+      - "discovery.type=single-node"
+      - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - app-network
+  #kibana
+  kibana7:
+    image: kibana:7.6.2
+    container_name: kibana7
+    environment:
+      - "ELASTICSEARCH_HOSTS=http://elastic7:9200"
+    ports:
+      - "5601:5601"
+    networks:
+      - app-network
+
+ #logstash
+  logstash:
+    image: logstash:7.8.1
+    volumes:
+      - ./logstash:/config-dir
+    command: logstash -f /config-dir/logstash.conf
+    ports:
+      - "5000:5000/tcp"
+      - "5000:5000/udp"
+      - "9600:9600"
+    networks:
+      - app-network
+    depends_on:
+      - elastic7
+
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge
+#Volumes
+volumes:
+  dbdata:
+    driver: local

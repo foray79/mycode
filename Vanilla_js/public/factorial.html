@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>팩토리얼 계산</title>
+</head>
+<bod
+ <h2>팩토리얼 계산</h2>
+    <script>
+        function fact(n)
+        {
+        
+            if(n<=1) return n;        
+            return n*fact(n-1);
+            
+        }
+        for(var i=1; i<10; i++){
+            document.write(i+"! = "+fact(i)+"<br/>");
+        }
+
+        var a =  2;
+        var b =  3;
+        const s = String.raw`i'm a boy\n`;
+        document.write(`${a} + ${b} = ${a+b}`);
+        document.write(s);
+    </script>
+    
+</body>
+</html>

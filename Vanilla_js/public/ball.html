@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>예제 -볼 애니메이션</title>
+<script>
+function maxin(target,source)
+{
+    for(var property in source){
+        if(source.hasOwnProperty(property)){
+            target[property] = source[property];
+        }
+    }
+    return target;
+}
+
+  var obj1 = {a:1,b:2};
+  var obj2 = {b:3,c:4};
+  var obj = maxin(obj2,obj1);
+  console.log(obj);
+  obj1.b=5;
+  console.log(obj);
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

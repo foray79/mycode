@@ -1,0 +1,6 @@
+db{
+    host : '192.168.0.65',
+    user : 'laravel',
+    password : 'laravel_pw',
+    database : 'laravel_db'
+}

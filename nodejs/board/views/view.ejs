@@ -1,0 +1,38 @@
+
+    <%- include ('head') %>
+<body>
+  <div class="container">
+  <div class="row border border-dark">
+   
+        <div class="col-3 text-white bg-dark">
+        제목
+        </div>
+        <div class="col-9 text-info">
+        <%=data.title%>
+        </div>
+  
+  </div>
+  
+  <div class="row border border-dark">
+       <div class="col-3 text-white bg-dark border-top border-white">
+      내용
+    </div>
+
+    <div class="col-9 text-info">
+      <%=data.content%>
+    </div>
+  </div>
+</div>
+<div>
+    <div class="row">    
+          <div class="col col-12">
+            <input type="submit" class="btn btn-outline-dark" onclick="location.href='/post/list'" value="뒤로">
+            <input type="submit" class="btn btn-outline-primary" onclick="location.href='/post/modify?id=<%=data.idx%>'" value="수정">
+            <input type="submit" class="btn btn-danger" onclick="location.href='/post/list'" value="삭제">
+        </div>
+    </div>
+    
+</div>
+
+</body>    
+</html>

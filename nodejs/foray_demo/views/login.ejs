@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+      <script src="/jquery/jquery.min.js"></script>
+      <%var curDate = new Date();%>
+      <script src="/js/login.js?v=<%=curDate.getTime()%>"></script>
+  </head>
+  <body>
+   <form name="form1" action="/users/login_prc" method="post">
+        <div>
+            <span> 아이디</span> <span><input type='text' name='id' /></span>
+        </div>
+         <div>
+            <span> 패스워드</span> <span><input type='password' name='pwd' /></span>
+        </div>
+       <div><button onclick="login();">로그인</button></div>
+    </form>
+  </body>
+</html>

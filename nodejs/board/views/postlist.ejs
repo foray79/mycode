@@ -1,0 +1,32 @@
+
+    <%- include ('head') %>
+<body>
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>title</th>
+            </tr>
+        </thead>
+        <tbody>
+    <% for(var i = 0; i < data.length; i++) { %>      
+        <tr>
+            <td><a href = "/post/view?idx=<%=data[i].idx%>"><%=data[i].title%></a></td>       
+        </tr>    
+    <% } %>
+            <tr>
+            <td> 
+                <nav aria-label="...">
+                <ul class="pagination">
+                    <%- paging %>
+                    </ul>
+                </nav>
+            </td>
+            </tr>
+    </tbody>
+    <tfoot>
+    <tr><td><input type="submit" class="btn btn-outline-primary" onclick="location.href='/post/write'" value="글쓰기"></td></tr>
+    </tfoot>
+    
+</body>
+
+</html>

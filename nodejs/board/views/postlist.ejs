@@ -17,7 +17,27 @@
             <td> 
                 <nav aria-label="...">
                 <ul class="pagination">
-                    <%- paging %>
+                
+             <%if(paging.prev_page >0){%>
+                  <li class='page-item' ><a class='page-link' href='/post/list?page=<%=paging.prev_page%><%=param%>'>Previous</a></li>
+            <%}
+               
+            for(var num = paging.startPage; num <= paging.endPage ;num++){
+                  
+                if(num==paging.current_page){
+            %>
+                    <li class='page-item active' aria-current='page'><a class='page-link' href='#'><%=num%></a></li>
+            <%   }else {%> 
+                    <li class='page-item' ><a class='page-link' href='/post/list?page=<%=num%><%=param%>'><%=num%></a></li>
+                
+           <%   }  
+            } 
+           %>
+           
+           <% if(paging.now_block < paging.total_block ){ %>
+                <li class='page-item' ><a class='page-link' href='/post/list?page=<%=paging.next_page%><%=param%>'>Next</a></li>
+           <% }%>
+                                                       
                     </ul>
                 </nav>
             </td>

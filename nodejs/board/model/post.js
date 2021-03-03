@@ -20,7 +20,10 @@ var post ={
     get_total_count:  function () {        
         return new Promise(function (resolve,reject){
             connection.query("select count(*) as cnt  from board ",function(error,result){
-               resolve(result[0].cnt);
+                 if(typeof(result[0]) != "undefined" && result[0] !== null) {
+                    resolve(result[0].cnt);
+                 }else resolve(result.cnt);                
+               
               return result[0].cnt;
             })
         });
@@ -37,10 +40,12 @@ var post ={
          
         console.log("post module list exec");
          let limit = page.limit ||10 ; 
-         let start  = page.page>0 ?(page.page - 1 ) *limit : limit;
-         console.log("limit :"+limit+",start :"+start);
+         let start  = page.page>0 ? page.page  *limit : 0;
+         console.log("page:"+page.page+", limit :"+limit+", start :"+start);
+         const sql = "SELECT *  FROM board ORDER BY idx LIMIT "+start+","+limit ;
+        // console.log(" query : "+sql);
            // connection.connect(); 
-            connection.query("select *  from board limit "+start+","+limit,function(error,result){
+            connection.query(sql,function(error,result){
                 if(error) console.log(error);
            
             console.log("query exec");

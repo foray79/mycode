@@ -11,13 +11,27 @@ var post ={
             
             
             const total_page = Math.ceil(totaldata/pagePerdata); //총 페이지수
-            const page_group = Math.ceil(current_page/page_count);// 페이지 그룹
-            console.log("toatalPage:"+total_page);
-            console.log("Page Group:"+page_group);
-            console.log("current page:"+current_page);
+            const total_block = Math.ceil(total_page/page_count);// 페이지 그룹
+            const now_block = Math.ceil(current_page/page_count);
+            const start_line_number = (now_block -1)*page_count;
+            const next_page = (page_count * now_block) +1;
+            const prev_page = now_block - 1;
+            const startPage =(now_block-1)*page_count+1;
+			let endp = startPage+(page_count-1);
+            var endPage;
+            if(endp>total_page) endPage = total_page;
+            else  endPage = endp;
             
-            let last = page_group * pagePerdata;
-            if(last>total_page) last = total_page;
+            var pagination = {'total_page':total_page , 'total_block':total_block , 'current_page':current_page , 'now_block': now_block,'start_line_number':start_line_number,'page_count':page_count,'next_page':next_page,'prev_page':prev_page,'startPage':startPage,'endPage':endPage};
+            console.log("========paging=======");
+            console.log(pagination);
+            console.log("========paging=======");
+            return pagination;
+            
+            
+            
+            let last = total_block * pagePerdata;
+            if(last>page_count) last = page_count;
             let first = last - (page_count - 1);
             if(first<0) first = 1;
             
@@ -25,14 +39,18 @@ var post ={
             const prev = first - 1;
             
             if(total_page<1) first = last;
-            
+            let start = (total_page * (page_group-1))+1;
             
              console.log("last:"+last);
              console.log("first:"+first);
              console.log("next:"+next);
              console.log("prev:"+prev);            
+            console.log("start:"+start);            
             
-            var pagination = "";
+            var pagination = {'last':last , 'first':first , 'next':next , 'prev': prev,'total_page':total_page,'current_page':current_page,'start':start,'end':page_count};
+            console.log(pagination);
+            return pagination;
+            var pagination ="";
             if(first > page_count){
                   pagination += "<li class='page-item' ><a class='page-link' href='/post/list?page="+prev+"'>Previous</a></li>";
             }
@@ -51,13 +69,15 @@ var post ={
         },
        list : async function (req,res){
            var page = req.body.page || req.query.page;
-            let limit = 5;            
+           var type = req.body.type || req.query.type;
+           var param = "&type="+type;
+            let limit = 3;            
             var data;
            
            var total_count = await model_post.get_total_count();
         
            
-
+         
             page = (typeof(page) != "undefined" && page !== null) ? page-1:0 ;
            
             model_post.list({'page':page,'limit':limit},function (result){
@@ -67,7 +87,14 @@ var post ={
                 console.log("get_total_count : "+total_count)   
                   paging =  post.paging(total_count,limit,page+1);
              
-                res.render('postlist',{data:data,paging:paging});
+                let prt = ({'data':data,'paging':paging});
+                console.log(prt);
+                
+            if(type == 'html')    {
+                res.render('postlist',{data:data,paging:paging,param:param});                
+            }else  {
+                res.send(prt);                
+            }
                 
             });
 

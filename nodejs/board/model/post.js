@@ -20,10 +20,14 @@ var post ={
     get_total_count:  function () {        
         return new Promise(function (resolve,reject){
             connection.query("select count(*) as cnt  from board ",function(error,result){
-                 if(typeof(result[0]) != "undefined" && result[0] !== null) {
-                    resolve(result[0].cnt);
-                 }else resolve(result.cnt);                
-               
+                 if(typeof(result) != "undefined" && result !== null) {
+                    resolve(result.cnt);
+                 }else if(typeof(result[0]) != "undefined" && result[0] !== null) {
+                    resolve(result[0].cnt);                
+                 }else{
+                     console.log(result);
+                     resolve(null);
+                 }
               return result[0].cnt;
             })
         });

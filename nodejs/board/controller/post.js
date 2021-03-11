@@ -87,13 +87,13 @@ var post ={
                 console.log("get_total_count : "+total_count)   
                   paging =  post.paging(total_count,limit,page+1);
              
-                let prt = ({'data':data,'paging':paging});
+                let prt = {"data":data,"paging":paging};
                 console.log(prt);
                 
             if(type == 'html')    {
                 res.render('postlist',{data:data,paging:paging,param:param});                
             }else  {
-                res.send(prt);                
+                res.send(JSON.stringify(prt));
             }
                 
             });

@@ -1,0 +1,37 @@
+npx create-react-app [project name]
+npm start
+
+필수
+node-sass : scss 사용 
+
+추천 패키지
+axios : api 통신
+react-query : api 통신
+redux : state 관리
+styled-components / emotion : css 처리 (css-in-js) 
+react-bootstrap, reactstrap : 부트스트랩 [
+ npm install --save reactstrap react-addons-transition-group react-addons-css-transition-group react react-dom
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+[출처] https://blog.naver.com/edam0530/221914143967
+]
+
+ react-devtools : 디버깅툴
+
+
+jquery 사용 방법
+[
+import jQuery from "jquery";
+window.$ = window.jQuery = jQuery;
+
+출처: https://yamea-guide.tistory.com/entry/reactjs-reactjs-에서-Jquery-사용-하는-방법unused-import-from-jquery
+]
+
+
+contenxt : 컴퍼넌트간 데이터 전달.
+
+
+기타 라이브러리
+반응형 : include-media
+색상 팔레트 : Open color
+불변성 유지 : immer

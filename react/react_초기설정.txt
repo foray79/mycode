@@ -3,6 +3,8 @@ npm start
 
 필수
 node-sass : scss 사용 
+qs : 쿼리 문자열을 객체로 변환
+create-react-app
 
 추천 패키지
 axios : api 통신

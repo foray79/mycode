@@ -9,7 +9,7 @@ qs : 쿼리 문자열을 객체로 변환
 create-react-app
 
 추천 패키지
-axios : api 통신
+axios : api 통신 - awr사용
 react-query : api 통신
 styled-components / emotion : css 처리 (css-in-js) 
 react-bootstrap, reactstrap : 부트스트랩 [

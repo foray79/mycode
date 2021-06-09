@@ -1,0 +1,17 @@
+1. express - 라우팅 미들웨어
+2. Express-generator - 기본 세팅
+ -> express 명령어로 세팅
+3.morgan - 로거
+4.nodemon - 변경사항 자동 반영 
+ -> package.json 수정 ( "start": "nodemon ./bin/www", "dev": "nodemon index" )
+5.ejs - view engine
+6.body-parser: 데이터 처리 미들웨어
+7. express-session - 세션
+ -> cookie-parser - 쿠키 미들웨어도 함께 사용해야함.
+8. pm2 - 프로세스 관리
+
+ express [project name] --view=ejs
+====유용한 툴 ===
+1.cheerio  -dom 파싱
+2.request  - http 통신
+3. shelljs  - shell 명령어 사용

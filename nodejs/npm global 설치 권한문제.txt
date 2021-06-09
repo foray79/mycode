@@ -1,0 +1,26 @@
+해결방법을 요약하자면, 자신의 계정 홈 경로에 npm global 설치 패키지 디렉토리를 만들고 글로벌 설치시에 해당 경로로 패키지가 설치 되도록 하는 방법인데
+
+다음의 과정을 진행하면 된다.
+
+===
+mkdir ~/.npm-global 
+npm config set prefix '~/.npm-global' 
+
+vi ~/.profile
+
+
+profile 제일 하단에 다음 코드를 추가한다.
+
+export PATH=~/.npm-global/bin:$PATH
+:wq 저장 후 변경된 프로필 내용을 적용 해준다.
+
+
+source ~/.profile
+끝이다.
+
+
+출처: https://brtech.tistory.com/124 [Dev Stack]
+
+공식 문서 https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
+
+출처: https://brtech.tistory.com/124 [Dev Stack]

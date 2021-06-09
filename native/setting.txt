@@ -1,0 +1,50 @@
+참고사이트
+https://dev-yakuza.posstree.com/ko/react-native/install-on-windows/
+https://jongmin92.github.io/2017/07/20/ReactNative/create-react-native-app/
+(공홈)https://reactnative.dev/docs/environment-setup
+
+1. Chocolatey 설치 (https://chocolatey.org/)
+=>@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+
+2.nodejs 설치 (https://nodejs.org/)
+=> choco install -y nodejs.install
+
+3.python 설치()
+=>choco install -y python2
+
+
+4.React Native CLI
+=> npm install -g react-native-cli
+
+5.jdk 설치
+
+6.안드로이드 스튜디오 설치
+
+->avd 설치 (API 레벨 29 이미지)
+
+모듈 설치
+npm i create-react-native-app
+
+버전 고정
+npm config set save-exact=true
+
+프로젝트 생성
+react-native init app_name / npx react-native init MyTestApp
+npx create-react-native-app app_name [Expo]
+
+
+실행
+
+npm run android
+
+Ctrl + M => 디버깅 모드
+
+==========components module================
+
+wathman
+styled-components : 스타일 / npm install styled-components@^4.0.0 ->버전 문제가 있는듯.
+babel-plugin-root-import : 절대경로 사용가능
+react-devtools : 디버깅툴
+react-native-navigation : 화면 전환
+react-native-geolocation-service : gps 정보
+npm i @react-native-async-storage/async-storage : 내부 저장소

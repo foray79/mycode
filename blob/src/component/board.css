@@ -1,0 +1,16 @@
+.canvas{
+
+border: 1px solid #000;
+}
+
+.cover{
+    position: relative;
+    top: -116px;
+    left: 0px;
+}
+
+.figure >span{
+    margin:5px;
+    font-size: 18px;
+    cursor :pointer;
+}

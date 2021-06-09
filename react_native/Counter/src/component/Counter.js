@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
       }
   });
 
-const Count =({title,initValue}) =>{
+const Counter =({title,initValue}) =>{
     const {count,setCount} = useState(0);
     const [flexDirection, setflexDirection] = useState("column")
 
@@ -37,4 +37,4 @@ const Count =({title,initValue}) =>{
       );
 }
 
-export default Count
+export default Counter;

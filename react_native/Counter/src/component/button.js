@@ -7,7 +7,8 @@
  const Button = ({iconName,onPress})=>{
    return(
      <Container onPress={onPress} >
-       <Icon source={iconName =='plus' ? require('../Asset/img/add.png') : require('../Asset/img/remove.png')} />
+       <button>+</button> <button>-</button>
+       {/* <Icon source={iconName =='plus' ? require('../Asset/img/add.png') : require('../Asset/img/remove.png')} /> */}
      </Container>
    );
  }

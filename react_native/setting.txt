@@ -43,3 +43,4 @@ wathman
 styled-components : 스타일
 babel-plugin-root-import : 절대경로 사용가능
 react-devtools : 디버깅툴
+react-navigation : 네비게이션

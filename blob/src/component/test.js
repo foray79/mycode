@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react' ;
+import React, { useEffect, useState } from 'react';
 import request from 'request';
 import cheerio from 'cheerio';
 

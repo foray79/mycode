@@ -1,0 +1,16 @@
+1.가상환경 만들기
+python -m venv myvenv
+virtualenv --python=python3 myvenv
+
+
+
+2.장고 설치
+pip  install django // pip update (python -m pip install --upgrade pip)
+
+
+
+3. 가상환경 실행 
+source Scripts\activate - 실행
+source Scripts\deactivate - 종료
+
+django-amdin startproject PRJ_NAME

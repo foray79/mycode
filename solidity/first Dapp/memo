@@ -1,0 +1,19 @@
+solidity
+
+ide 
+hardhat
+truffle
+remix
+
+
+harthat 환경 구성 (https://jerryjerryjerry.tistory.com/112)
+
+node 12이상 
+npm7 이상 필요
+
+npm install --save-dev hardhat
+npx hardhat
+npm install --save-dev @openzeppelin/hardhat-upgrades
+npm install --save-dev @nomiclabs/hardhat-ethers ethers
+
+npm install --save-dev dotenv #환경변수 설정

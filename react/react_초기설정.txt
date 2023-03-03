@@ -41,7 +41,7 @@ react-redux : connect 함수 사용 :리액트와 리덕스 연동
 redux-devtools-extension : 크롬 개발자도구 디버깅툴
 redux-loggerr : 로그(콘솔로그) 미들웨어 
 redux-thunk : 비동기 작업 미들웨어
-
+recoil : 상태관리(facebook 공식)
 
 
 기타 라이브러리

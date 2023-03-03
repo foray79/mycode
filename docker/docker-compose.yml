@@ -41,13 +41,20 @@ services:
 
 
   #MySQL Service
-  mysql:
-    image: mysql:5.7.22
-    container_name: mysql
+#  mysql:
+#    image: mysql:5.7.22
+    #container_name: mysql
+    #restart: unless-stopped
+    #tty: true
+    #expose:
+     # - "3306"
+
+   #mariadb service
+  mariadb:
+    image: mariadb
     restart: unless-stopped
-    tty: true
     expose:
-      - "3306"
+      - "3306" 
     #ports:
     #  - "3306:3306"
     environment:
@@ -63,14 +70,7 @@ services:
     networks:
       - app-network
 
-  adminer:
-    container_name: adminer
-    image: adminer
-    restart: unless-stopped
-    ports:
-      - 8080:8080
-    networks:
-      - app-network
+ 
 #elasticsearch
   elastic7:
     container_name: elastic7

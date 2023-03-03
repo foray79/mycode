@@ -1,0 +1,3 @@
+// .env
+ALCHEMY_URL = “https://eth-goerli.g.alchemy.com/v2/9EVaDdxA5eQVcCg224RPNow-6qvwvX9M”
+METAMASK_KEY = “0x6cf9e95A406881db3be23894A18eB8E7c5935506”

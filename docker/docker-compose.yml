@@ -17,7 +17,7 @@ services:
       SERVICE_TAGS: dev
     working_dir: /var/www
     volumes:
-      - ../../git/search-web2:/var/www
+     # - ../../git/search-web2:/var/www
       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
     networks:
       - app-network
@@ -41,8 +41,8 @@ services:
 
 
   #MySQL Service
-#  mysql:
-#    image: mysql:5.7.22
+  mysql:
+    image: mysql:5.7.22
     #container_name: mysql
     #restart: unless-stopped
     #tty: true

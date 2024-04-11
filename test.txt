@@ -1,3 +1,7 @@
 hihihhi~~~
 
 first commit
+
+
+리눅스  composer 사용시 ssl 오류 문제 해결법
+https://manuals.gfi.com/en/kerio/connect/content/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html

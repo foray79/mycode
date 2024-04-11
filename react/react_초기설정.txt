@@ -55,3 +55,8 @@ recoil : 상태관리(facebook 공식)
 애니메이션 : gsap
 
 npm i axios styled-components node-sass react-devtools redux-actions redux react-redux redux-devtools-extension 
+
+
+
+[2023-06-13 추가]
+npm  create-next-app (nextjs +react 플라이트)

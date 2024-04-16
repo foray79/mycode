@@ -1,0 +1,11 @@
+모델 : 데이터를 학습해서..
+데이터
+
+layer
+activation fun
+loss fun - 오차값(예측값- 실제값) MSE(최소제곱오차)
+optimizer :  오차값을 최소화 - gradient decent (경사하강법)
+
+linear : 선형회귀
+sigmoid : 로지스틱 회귀(이진분류)
+softmax : 소프트맥스 회귀(다중분류)

@@ -1,0 +1,15 @@
+지도학습 : 함수 학습 (인풋-아웃풋)
+비지도학습 : 분포 학습(클러스터)
+강화학습 :
+
+데이터->모델선택(loss func,)->학습->평가(목표치달성)->저장
+
+<activation function>
+sigmoid
+tanh
+*ReLu
+Leaky ReLU
+Maxout
+ELU
+
+
